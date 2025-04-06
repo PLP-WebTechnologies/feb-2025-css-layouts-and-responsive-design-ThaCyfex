@@ -1,0 +1,86 @@
+/* I reset all margins, paddings, and box-sizing for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* I set the default font and line height for the body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* This is my navigation bar styling */
+.navbar {
+  background-color: #333; /* I use a dark background for contrast */
+  color: #fff; /* White text for readability */
+  padding: 1rem; /* Adds spacing inside the navbar */
+}
+
+.navbar ul {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Aligns items horizontally */
+  justify-content: space-around; /* Spreads items evenly */
+}
+
+.navbar ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: #fff; /* Keeps the text white */
+  padding: 0.5rem 1rem; /* Adds spacing around links */
+}
+
+.navbar ul li a:hover {
+  background-color: #575757; /* Changes background on hover */
+  border-radius: 5px; /* Rounds the corners */
+}
+
+/* This is how I style the main content layout */
+.content {
+  display: flex; /* Makes sections align horizontally */
+  flex-wrap: wrap; /* Allows sections to wrap for responsiveness */
+  gap: 1rem; /* Adds space between sections */
+  padding: 1rem; /* Adds spacing inside the content area */
+}
+
+.section {
+  flex: 1 1 calc(33.333% - 1rem); /* Each section takes equal space */
+  background-color: #f4f4f4; /* Light background for contrast */
+  padding: 1rem; /* Adds spacing inside each section */
+  border: 1px solid #ddd; /* Adds a subtle border */
+}
+
+/* This is my footer styling */
+.footer {
+  text-align: center; /* Centers the text */
+  padding: 1rem; /* Adds spacing inside the footer */
+  background-color: #333; /* Matches the navbar background */
+  color: white; /* White text for readability */
+}
+
+/* I use media queries to make the layout responsive */
+@media screen and (max-width: 768px) {
+  /* For tablets, I stack sections vertically */
+  .content {
+    flex-direction: column;
+  }
+
+  .section {
+    flex: 1 1 100%; /* Sections take up full width */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stacks nav items vertically */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* For mobile devices, I adjust padding and font size */
+  .navbar ul li a {
+    padding: 0.5rem; /* Reduces padding for smaller screens */
+  }
+
+  .section {
+    font-size: 0.9rem; /* Makes text smaller for better fit */
+  }
+}
